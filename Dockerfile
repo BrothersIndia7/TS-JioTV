@@ -12,4 +12,4 @@ RUN a2enmod rewrite
 RUN service apache2 restart
     
 # Expose port 80, the default for web servers
-EXPOSE 8880
+EXPOSE 80:8880
