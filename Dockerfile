@@ -10,6 +10,9 @@ COPY . /var/www/html/
 # Enabled mod_rewrite
 RUN a2enmod rewrite
 RUN service apache2 restart
-    
+
+ENV PUID=0
+ENV PGID=0
+
 # Expose port 80, the default for web servers
 EXPOSE 80
