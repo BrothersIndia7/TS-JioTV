@@ -7,5 +7,9 @@ WORKDIR /var/www/html
 # Copy your PHP files into the container's web root
 COPY . /var/www/html/
 
+# Enabled mod_rewrite
+RUN a2enmod rewrite
+RUN service apache2 restart
+    
 # Expose port 80, the default for web servers
 EXPOSE 80
